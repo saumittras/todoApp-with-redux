@@ -1,13 +1,11 @@
 import React from "react";
 import { Outlet } from "react-router";
-import NavBar from "./components/NavBar";
+import Navbar from "./components/NavsBar";
 
 const Layout: React.FC = () => {
   return (
     <div>
-      <nav className="navbar max-w-full bg-amber-300 py-6">
-        <NavBar />
-      </nav>
+      <Navbar />
       <main className="main">
         <Outlet />
       </main>
