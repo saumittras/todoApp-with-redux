@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
+import { ModeToggle } from "./mode-togoler";
 
 const Navbar = () => {
   const menu = (
@@ -20,16 +21,21 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="bg-white shadow-md  w-full ">
+    <nav className=" shadow-md  w-full ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0 text-2xl font-bold text-indigo-600">
-            MyLogo
+            ToDo Apps
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">{menu}</div>
+          <div className="hidden md:flex ">
+            <div className="space-x-8">
+              {menu}
+              <ModeToggle />
+            </div>
+          </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
