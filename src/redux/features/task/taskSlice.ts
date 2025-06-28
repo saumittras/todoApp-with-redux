@@ -22,6 +22,14 @@ const initialState: InitialState = {
       isCompleted: false,
       priority: "High",
     },
+    {
+      id: "3",
+      title: "Create a Backend",
+      description: "Create Home Page abd routing",
+      dueDate: "2025-11",
+      isCompleted: false,
+      priority: "High",
+    },
   ],
 };
 
