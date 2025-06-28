@@ -22,7 +22,7 @@ const initialState: InitialState = {
       description: "Create Home Page abd routing",
       dueDate: "2025-11",
       isCompleted: false,
-      priority: "High",
+      priority: "Medium",
     },
     {
       id: "3",
@@ -31,6 +31,14 @@ const initialState: InitialState = {
       dueDate: "2025-11",
       isCompleted: false,
       priority: "High",
+    },
+    {
+      id: "4",
+      title: "Create a Hijibiji",
+      description: "Create Home Page abd routing",
+      dueDate: "2025-11",
+      isCompleted: false,
+      priority: "Low",
     },
   ],
   filter: "all",

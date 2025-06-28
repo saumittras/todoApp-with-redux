@@ -11,10 +11,10 @@ export default function Task() {
       <div>
         <h1>Tasks</h1>
       </div>
-      <div className="spacey-y-5 mt-5">
-        <TaskCard />
-        <TaskCard />
-        <TaskCard />
+      <div className="space-y-5 mt-5">
+        {tasks.map((task) => (
+          <TaskCard key={task.id} task={task} />
+        ))}
       </div>
     </div>
   );
