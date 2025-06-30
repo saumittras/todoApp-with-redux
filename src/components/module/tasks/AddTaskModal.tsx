@@ -31,14 +31,19 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
+import { addTask } from "@/redux/features/task/taskSlice";
+import { useAppDispatch } from "@/redux/hook";
+import type { ITask } from "@/type";
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
+import { useForm, type FieldValues, type SubmitHandler } from "react-hook-form";
 
-import { useForm } from "react-hook-form";
 export function AddTaskModal() {
   const form = useForm();
-  const onSubmit = (d) => {
-    console.log(d);
+  const dispatch = useAppDispatch();
+  const onSubmit: SubmitHandler<FieldValues> = (data) => {
+    console.log(data);
+    dispatch(addTask(data as ITask));
   };
   return (
     <Dialog>
@@ -103,7 +108,7 @@ export function AddTaskModal() {
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
-                      <SelectItem value="High">High</SelectItem>
+                      <SelectItem value="high">High</SelectItem>
                       <SelectItem value="medium">Medium</SelectItem>
                       <SelectItem value="low">Low</SelectItem>
                     </SelectContent>
@@ -113,7 +118,7 @@ export function AddTaskModal() {
             />
             <FormField
               control={form.control}
-              name="dob"
+              name="dueDate"
               render={({ field }) => (
                 <FormItem className="flex flex-col">
                   <FormLabel>Due Date</FormLabel>
