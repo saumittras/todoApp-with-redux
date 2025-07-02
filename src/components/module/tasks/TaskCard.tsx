@@ -38,7 +38,10 @@ export default function TaskCard({ task }: IProps) {
           >
             <Trash2 />
           </Button>
-          <Checkbox onClick={() => dispatch(toggleCompleteState(task.id))} />
+          <Checkbox
+            checked={task.isCompleted}
+            onClick={() => dispatch(toggleCompleteState(task.id))}
+          />
         </div>
       </div>
       <p className="mt-5">{task.description}</p>

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
-import { ModeToggle } from "./mode-togoler";
 
 const Navbar = () => {
   const menu = (
@@ -31,10 +30,7 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex ">
-            <div className="space-x-8">
-              {menu}
-              <ModeToggle />
-            </div>
+            <div className="space-x-8">{menu}</div>
           </div>
 
           {/* Mobile Menu Button */}
